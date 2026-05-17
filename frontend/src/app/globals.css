@@ -1,0 +1,319 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════ */
+:root {
+  --bg-base: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-elevated: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-hover: #f1f5f9;
+
+  --accent-primary: #6366f1;
+  --accent-primary-hover: #4f46e5;
+  --accent-secondary: #10b981;
+  --accent-danger: #ef4444;
+  --accent-warning: #f59e0b;
+  --accent-info: #3b82f6;
+
+  /* Status Colors */
+  --success-bg: #ecfdf5;
+  --success-text: #059669;
+  --success-border: #10b981;
+
+  --danger-bg: #fef2f2;
+  --danger-text: #dc2626;
+  --danger-border: #ef4444;
+
+  --warning-bg: #fffbeb;
+  --warning-text: #d97706;
+  --warning-border: #f59e0b;
+
+  --info-bg: #eff6ff;
+  --info-text: #2563eb;
+  --info-border: #3b82f6;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+
+  --border-subtle: #e2e8f0;
+  --border-default: #cbd5e1;
+  --border-strong: #94a3b8;
+
+  --focus-ring: #6366f1;
+  --focus-ring-offset: #ffffff;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-glow: 0 4px 14px 0 rgb(99 102 241 / 0.3);
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --modal-overlay: rgba(0, 0, 0, 0.4);
+}
+
+/* ═══════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ═══════════════════════════════════════════
+   SKIP TO CONTENT (ACCESSIBILITY)
+═══════════════════════════════════════════ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ═══════════════════════════════════════════
+   FOCUS STATES (WCAG 2.1 AA)
+═══════════════════════════════════════════ */
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ═══════════════════════════════════════════
+   SCROLLBAR
+═══════════════════════════════════════════ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ═══════════════════════════════════════════
+   UTILITY: VISUALLY HIDDEN (SCREEN READER)
+═══════════════════════════════════════════ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ═══════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(99 102 241 / 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgb(99 102 241 / 0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s ease forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.35s ease forwards;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* ═══════════════════════════════════════════
+   TABLE UTILITIES
+═══════════════════════════════════════════ */
+.table-sortable-header {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.table-sortable-header:hover {
+  color: var(--text-primary);
+}
+
+/* ═══════════════════════════════════════════
+   GLASS MORPHISM CARD
+═══════════════════════════════════════════ */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+}
+
+/* ═══════════════════════════════════════════
+   GRADIENT TEXT
+═══════════════════════════════════════════ */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ═══════════════════════════════════════════
+   STATUS BADGES
+═══════════════════════════════════════════ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.badge-success {
+  background: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+}
+
+.badge-danger {
+  background: var(--danger-bg);
+  color: var(--danger-text);
+  border: 1px solid var(--danger-border);
+}
+
+.badge-warning {
+  background: var(--warning-bg);
+  color: var(--warning-text);
+  border: 1px solid var(--warning-border);
+}
+
+.badge-info {
+  background: var(--info-bg);
+  color: var(--info-text);
+  border: 1px solid var(--info-border);
+}
+
+.badge-neutral {
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.badge-primary {
+  background: var(--info-bg);
+  color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+}
+
+/* ═══════════════════════════════════════════
+   SHIMMER SKELETON
+═══════════════════════════════════════════ */
+.skeleton {
+  background: linear-gradient(90deg,
+      var(--bg-elevated) 25%,
+      var(--bg-hover) 50%,
+      var(--bg-elevated) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-md);
+}

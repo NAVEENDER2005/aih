@@ -1,0 +1,358 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.aihirer:backend >-------------------------
+[INFO] Building backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.5:run (default-cli) > test-compile @ backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ backend ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ backend ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ backend ---
+[INFO] skip non existing resourceDirectory D:\virtusa\ai-hirer\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ backend ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.5:run (default-cli) @ backend ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-03-08T21:51:55.499+05:30  INFO 1760 --- [backend] [           main] com.aihirer.backend.BackendApplication   : Starting BackendApplication using Java 21.0.5 with PID 1760 (D:\virtusa\ai-hirer\backend\target\classes started by User in D:\virtusa\ai-hirer\backend)
+2026-03-08T21:51:55.501+05:30  INFO 1760 --- [backend] [           main] com.aihirer.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-03-08T21:51:56.144+05:30  INFO 1760 --- [backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-08T21:51:56.286+05:30  INFO 1760 --- [backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 9 JPA repository interfaces.
+2026-03-08T21:51:56.836+05:30  INFO 1760 --- [backend] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-08T21:51:56.844+05:30  INFO 1760 --- [backend] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-08T21:51:56.844+05:30  INFO 1760 --- [backend] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-08T21:51:56.889+05:30  INFO 1760 --- [backend] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-08T21:51:56.889+05:30  INFO 1760 --- [backend] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1350 ms
+2026-03-08T21:51:57.039+05:30  INFO 1760 --- [backend] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-08T21:51:57.083+05:30  INFO 1760 --- [backend] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-08T21:51:57.107+05:30  INFO 1760 --- [backend] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-08T21:51:57.273+05:30  INFO 1760 --- [backend] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-08T21:51:57.290+05:30  INFO 1760 --- [backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-08T21:51:57.423+05:30  INFO 1760 --- [backend] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@379f9555
+2026-03-08T21:51:57.425+05:30  INFO 1760 --- [backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-08T21:51:57.452+05:30  WARN 1760 --- [backend] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-08T21:51:58.406+05:30  INFO 1760 --- [backend] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-08T21:51:58.450+05:30  INFO 1760 --- [backend] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-08T21:51:59.488+05:30  WARN 1760 --- [backend] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-08T21:51:59.716+05:30  INFO 1760 --- [backend] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@42ceb67f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52e44f71, org.springframework.security.web.context.SecurityContextHolderFilter@6fc84468, org.springframework.security.web.header.HeaderWriterFilter@44b99467, org.springframework.web.filter.CorsFilter@2e1b1d22, org.springframework.security.web.authentication.logout.LogoutFilter@731bdcca, com.aihirer.backend.security.AuthTokenFilter@593e594f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4583a186, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55854382, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@653c0c9c, org.springframework.security.web.session.SessionManagementFilter@112f8f8f, org.springframework.security.web.access.ExceptionTranslationFilter@5cdf2c83, org.springframework.security.web.access.intercept.AuthorizationFilter@5e2ab1c]
+2026-03-08T21:51:59.992+05:30  INFO 1760 --- [backend] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-08T21:51:59.999+05:30  INFO 1760 --- [backend] [           main] com.aihirer.backend.BackendApplication   : Started BackendApplication in 4.776 seconds (process running for 5.097)
+2026-03-08T21:52:00.079+05:30  INFO 1760 --- [backend] [           main] com.aihirer.backend.BackendApplication   : Successfully dropped check constraints and ensured columns exist.
+2026-03-08T21:52:40.033+05:30  INFO 1760 --- [backend] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-08T21:52:40.034+05:30  INFO 1760 --- [backend] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-08T21:52:40.053+05:30  INFO 1760 --- [backend] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.ai_processed,
+        u1_0.created_at,
+        u1_0.detected_skills,
+        u1_0.email,
+        u1_0.experience_level,
+        u1_0.github_profile,
+        u1_0.github_score,
+        u1_0.github_summary,
+        u1_0.interested_role,
+        u1_0.linkedin_profile,
+        u1_0.linkedin_score,
+        u1_0.linkedin_summary,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.active_round,
+        j1_0.ai_responsibilities,
+        j1_0.ai_skills,
+        j1_0.ai_summary,
+        j1_0.created_at,
+        j1_0.created_by,
+        j1_0.cutoff_round1,
+        j1_0.cutoff_round2,
+        j1_0.cutoff_round3,
+        j1_0.cutoff_round4,
+        j1_0.cutoff_round5,
+        j1_0.department,
+        j1_0.description,
+        j1_0.location,
+        j1_0.max_attempts,
+        j1_0.min_github_score,
+        j1_0.min_linkedin_score,
+        j1_0.required_skills,
+        j1_0.round_status,
+        j1_0.skill_weightage,
+        j1_0.status,
+        j1_0.title,
+        j1_0.total_rounds 
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.ai_reasoning_summary,
+        a1_0.attempt_count,
+        a1_0.bgv_status,
+        a1_0.candidate_id,
+        a1_0.coding_ai_score,
+        a1_0.coding_feedback,
+        a1_0.college_name,
+        a1_0.college_percentage,
+        a1_0.created_at,
+        a1_0.current_round_number,
+        a1_0.current_stage,
+        a1_0.degree_name,
+        a1_0.graduation_year,
+        a1_0.job_id,
+        a1_0.overall_round_score,
+        a1_0.overall_status,
+        a1_0.tenth_percentage,
+        a1_0.test_expires_at,
+        a1_0.test_payload,
+        a1_0.test_started_at,
+        a1_0.test_status,
+        a1_0.twelfth_percentage,
+        a1_0.version 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.ai_reasoning_summary,
+        a1_0.attempt_count,
+        a1_0.bgv_status,
+        a1_0.candidate_id,
+        a1_0.coding_ai_score,
+        a1_0.coding_feedback,
+        a1_0.college_name,
+        a1_0.college_percentage,
+        a1_0.created_at,
+        a1_0.current_round_number,
+        a1_0.current_stage,
+        a1_0.degree_name,
+        a1_0.graduation_year,
+        a1_0.job_id,
+        a1_0.overall_round_score,
+        a1_0.overall_status,
+        a1_0.tenth_percentage,
+        a1_0.test_expires_at,
+        a1_0.test_payload,
+        a1_0.test_started_at,
+        a1_0.test_status,
+        a1_0.twelfth_percentage,
+        a1_0.version 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.ai_reasoning_summary,
+        a1_0.attempt_count,
+        a1_0.bgv_status,
+        a1_0.candidate_id,
+        a1_0.coding_ai_score,
+        a1_0.coding_feedback,
+        a1_0.college_name,
+        a1_0.college_percentage,
+        a1_0.created_at,
+        a1_0.current_round_number,
+        a1_0.current_stage,
+        a1_0.degree_name,
+        a1_0.graduation_year,
+        a1_0.job_id,
+        a1_0.overall_round_score,
+        a1_0.overall_status,
+        a1_0.tenth_percentage,
+        a1_0.test_expires_at,
+        a1_0.test_payload,
+        a1_0.test_started_at,
+        a1_0.test_status,
+        a1_0.twelfth_percentage,
+        a1_0.version 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.ai_reasoning_summary,
+        a1_0.attempt_count,
+        a1_0.bgv_status,
+        a1_0.candidate_id,
+        a1_0.coding_ai_score,
+        a1_0.coding_feedback,
+        a1_0.college_name,
+        a1_0.college_percentage,
+        a1_0.created_at,
+        a1_0.current_round_number,
+        a1_0.current_stage,
+        a1_0.degree_name,
+        a1_0.graduation_year,
+        a1_0.job_id,
+        a1_0.overall_round_score,
+        a1_0.overall_status,
+        a1_0.tenth_percentage,
+        a1_0.test_expires_at,
+        a1_0.test_payload,
+        a1_0.test_started_at,
+        a1_0.test_status,
+        a1_0.twelfth_percentage,
+        a1_0.version 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.ai_reasoning_summary,
+        a1_0.attempt_count,
+        a1_0.bgv_status,
+        a1_0.candidate_id,
+        a1_0.coding_ai_score,
+        a1_0.coding_feedback,
+        a1_0.college_name,
+        a1_0.college_percentage,
+        a1_0.created_at,
+        a1_0.current_round_number,
+        a1_0.current_stage,
+        a1_0.degree_name,
+        a1_0.graduation_year,
+        a1_0.job_id,
+        a1_0.overall_round_score,
+        a1_0.overall_status,
+        a1_0.tenth_percentage,
+        a1_0.test_expires_at,
+        a1_0.test_payload,
+        a1_0.test_started_at,
+        a1_0.test_status,
+        a1_0.twelfth_percentage,
+        a1_0.version 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.ai_reasoning_summary,
+        a1_0.attempt_count,
+        a1_0.bgv_status,
+        a1_0.candidate_id,
+        a1_0.coding_ai_score,
+        a1_0.coding_feedback,
+        a1_0.college_name,
+        a1_0.college_percentage,
+        a1_0.created_at,
+        a1_0.current_round_number,
+        a1_0.current_stage,
+        a1_0.degree_name,
+        a1_0.graduation_year,
+        a1_0.job_id,
+        a1_0.overall_round_score,
+        a1_0.overall_status,
+        a1_0.tenth_percentage,
+        a1_0.test_expires_at,
+        a1_0.test_payload,
+        a1_0.test_started_at,
+        a1_0.test_status,
+        a1_0.twelfth_percentage,
+        a1_0.version 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.ai_reasoning_summary,
+        a1_0.attempt_count,
+        a1_0.bgv_status,
+        a1_0.candidate_id,
+        a1_0.coding_ai_score,
+        a1_0.coding_feedback,
+        a1_0.college_name,
+        a1_0.college_percentage,
+        a1_0.created_at,
+        a1_0.current_round_number,
+        a1_0.current_stage,
+        a1_0.degree_name,
+        a1_0.graduation_year,
+        a1_0.job_id,
+        a1_0.overall_round_score,
+        a1_0.overall_status,
+        a1_0.tenth_percentage,
+        a1_0.test_expires_at,
+        a1_0.test_payload,
+        a1_0.test_started_at,
+        a1_0.test_status,
+        a1_0.twelfth_percentage,
+        a1_0.version 
+    from
+        applications a1_0 
+    where
+        a1_0.job_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.ai_processed,
+        u1_0.created_at,
+        u1_0.detected_skills,
+        u1_0.email,
+        u1_0.experience_level,
+        u1_0.github_profile,
+        u1_0.github_score,
+        u1_0.github_summary,
+        u1_0.interested_role,
+        u1_0.linkedin_profile,
+        u1_0.linkedin_score,
+        u1_0.linkedin_summary,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  05:51 min
+[INFO] Finished at: 2026-03-08T21:57:43+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.2.5:run (default-cli) on project backend: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
